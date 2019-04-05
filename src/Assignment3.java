@@ -1,5 +1,5 @@
 
-public class Flow<V, E> {
+public class Assignment3<V, E> {
 
     //variable to keep track of max flow through network
     public int maxFlow = 0;
