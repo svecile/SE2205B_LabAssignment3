@@ -37,11 +37,12 @@ public class Assignment3<V, E> {
             if (visitedNodes[v.getLabel()] == 0) {
                 //mark node as visited
                 visitedNodes[v.getLabel()] = 1;
+                Iterable<Edge<E>> iterEdges = FN.outgoingEdges(v);
 
                 //for each edge adjacent to vertex v check if it has been visited and if more flow can be added
-                for (Edge<E> e : FN.outgoingEdges(v)) {
+                for (Edge<E> e : iterEdges) {
 
-                    if (visitedNodes[v.getLabel()] == 0 && (e.flow < e.flowCap)) {
+                    if (visitedNodes[v.getLabel()] == 0 && e.flow < e.flowCap) {
 
                         //set v as the parent of the vertexes at the end of the edges then enqueue them
                         parent[FN.opposite(v, e).getLabel()] = v.getLabel();
