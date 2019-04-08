@@ -1,4 +1,4 @@
-
+// Code by Spencer Vecile and Hayden Hoffman
 public class Assignment3<V, E> {
 
     //variable to keep track of max flow through network
